@@ -1,3 +1,9 @@
+/*
+https://emvlab.org/emvtags/all/
+https://www.openscdp.org/scripts/tutorial/emv/tlv.html
+
+*/
+
 package com.avalokita.emv;
 
 public enum Type {
@@ -28,5 +34,9 @@ public enum Type {
 
 	public final int numericValue() { return this.value; }	
 	public final String stringValue() { return Integer.toHexString(this.value); }
+
+	public final Source source() { return this.source; }
+	public final Format format() { return this.format; }
+	public final int length() { return this.length; }
 
 }
