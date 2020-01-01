@@ -1,6 +1,6 @@
 package com.avalokita.emv;
 
-public enum Format {
+public enum TagDataFormat {
 	
 	BINARY,
 	NUMERIC

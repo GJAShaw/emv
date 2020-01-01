@@ -1,6 +1,6 @@
 package com.avalokita.emv;
 
-public enum Source {
+public enum TagSource {
 	
 	ICC,
 	TERMINAL;
