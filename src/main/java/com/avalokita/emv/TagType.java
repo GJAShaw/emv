@@ -23,20 +23,27 @@ public enum TagType {
 	private final int value;
 	private final TagSource source;
 	private final TagDataFormat format;
-	private final int length;
+	private final int dataLength;
+	private final int typeLength;
 	
-	private TagType(String value, TagSource source, TagDataFormat format, int length) {
+	private TagType(String value, TagSource source, TagDataFormat format, int dataLength) {
 		this.value = Integer.parseInt(value, 16);
 		this.source = source;
 		this.format = format;
-		this.length = length;
+		this.dataLength = dataLength;
+		this.typeLength = value.length() / 2;
 	}
 
 	public final int numericValue() { return this.value; }	
 	public final String stringValue() { return Integer.toHexString(this.value); }
-
 	public final TagSource source() { return this.source; }
 	public final TagDataFormat format() { return this.format; }
-	public final int length() { return this.length; }
+	public final int dataLength() { return this.dataLength; }
+	public final int typeLength() { return this.typeLength; }
+	
+	public final TagClass tagClass() {
+		// ****TODO work in progress
+		return TagClass.APPLICATION;
+	}
 
 }
